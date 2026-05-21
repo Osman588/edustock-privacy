@@ -1,67 +1,509 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduStock Privacy Policy</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            color: #333;
-            line-height: 1.6;
-        }
-        h1 { color: #1a73e8; }
-        h2 { color: #333; margin-top: 30px; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduStock — Privacy Policy &amp; User Agreement</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #F8F9FB;
+      --surface:  #FFFFFF;
+      --border:   #E4E7EC;
+      --ink:      #111827;
+      --ink-2:    #374151;
+      --ink-3:    #6B7280;
+      --accent:   #1D4ED8;
+      --accent-l: #EFF6FF;
+      --serif:    'Georgia', 'Times New Roman', serif;
+      --sans:     -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--ink);
+      color: #fff;
+      padding: 52px 24px 44px;
+      text-align: center;
+    }
+    header h1 {
+      font-family: var(--serif);
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: normal;
+      letter-spacing: -0.3px;
+      margin-bottom: 10px;
+    }
+    header p {
+      color: #9CA3AF;
+      font-size: 14px;
+    }
+
+    /* ── Nav tabs ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      display: block;
+      padding: 14px 28px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink-3);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: color .15s, border-color .15s;
+    }
+    nav a:hover, nav a.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    /* ── Layout ── */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+    }
+
+    /* ── Section headers ── */
+    .doc-title {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: normal;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .doc-meta {
+      font-size: 13px;
+      color: var(--ink-3);
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Article sections ── */
+    article { margin-bottom: 40px; }
+    article h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 12px;
+      padding-left: 12px;
+      border-left: 3px solid var(--accent);
+    }
+    article h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink-2);
+      margin: 16px 0 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    article p {
+      color: var(--ink-2);
+      margin-bottom: 12px;
+      font-size: 14.5px;
+    }
+    article p:last-child { margin-bottom: 0; }
+    article ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+      color: var(--ink-2);
+      font-size: 14.5px;
+    }
+    article ul li { margin-bottom: 6px; }
+
+    /* ── Table ── */
+    .tbl-wrap { overflow-x: auto; margin-bottom: 16px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th {
+      background: #F1F5F9;
+      color: var(--ink);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 700;
+      border-bottom: 1px solid var(--border);
+    }
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--ink-2);
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) td { background: #FAFBFC; }
+
+    /* ── Note box ── */
+    .note {
+      background: var(--accent-l);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      padding: 12px 16px;
+      font-size: 13.5px;
+      color: var(--ink-2);
+      margin-bottom: 16px;
+    }
+
+    /* ── Divider ── */
+    hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+    /* ── Contact block ── */
+    .contact-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      font-size: 14px;
+      color: var(--ink-2);
+    }
+    .contact-block strong { color: var(--ink); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 12px;
+      color: var(--ink-3);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 500px) {
+      nav a { padding: 12px 16px; font-size: 13px; }
+      main { padding: 32px 16px 80px; }
+    }
+  </style>
 </head>
 <body>
-    <h1>EduStock Privacy Policy</h1>
-    <p>Last updated: May 17, 2026</p>
 
-    <h2>1. Introduction</h2>
-    <p>EduStock is a free educational app for Pakistani students. This privacy policy explains how we collect, use, and protect your information.</p>
+<header>
+  <h1>EduStock</h1>
+  <p>Privacy Policy &amp; User Agreement</p>
+  <p style="margin-top:6px;">Effective: May 17, 2026 &nbsp;·&nbsp; Pakistan</p>
+</header>
 
-    <h2>2. Information We Collect</h2>
-    <ul>
-        <li>Email address and name (when you register)</li>
-        <li>Phone number (if you use phone login)</li>
-        <li>Profile picture (optional)</li>
-        <li>App usage data (progress, badges, quiz results)</li>
-        <li>Device information (for crash reporting)</li>
-    </ul>
+<nav>
+  <a href="#" class="active" onclick="show('privacy', this); return false;">Privacy Policy</a>
+  <a href="#" onclick="show('terms', this); return false;">User Agreement</a>
+</nav>
 
+<!-- ═══════════════════════════════════════════
+     PAGE 1 — PRIVACY POLICY
+════════════════════════════════════════════ -->
+<div id="privacy" class="page active">
+<main>
+
+  <h1 class="doc-title">Privacy Policy</h1>
+  <p class="doc-meta">
+    Effective date: May 17, 2026 &nbsp;·&nbsp; Last updated: May 2026<br>
+    This policy applies to the EduStock mobile application for Android.
+  </p>
+
+  <!-- 1 -->
+  <article>
+    <h2>1. Who We Are</h2>
+    <p>EduStock is an independent educational application built for students in Grades 6 to 12. We are not affiliated with, endorsed by, or connected to any government body, provincial textbook board, or ministry of education. The app is developed and operated by an individual developer based in Pakistan.</p>
+    <p>When this policy says "we", "us", or "our", it refers to the developer of EduStock. When it says "you", it refers to anyone who uses the app.</p>
+  </article>
+
+  <!-- 2 -->
+  <article>
+    <h2>2. What Information We Collect and Why</h2>
+
+    <h3>2.1 Information You Give Us Directly</h3>
+    <p><strong>Name and email address</strong> — collected when you create an account. Stored in Google Firebase. Used to identify your account and restore your progress across devices.</p>
+    <p><strong>Phone number</strong> — collected only if you choose phone-based login. Used by Firebase for verification. Not stored separately by us.</p>
+    <p><strong>Profile picture</strong> — uploaded optionally by you. Stored on Google Firebase Storage. Displayed only to you inside the app.</p>
+    <p><strong>Password</strong> — never stored by us. Managed entirely by Google Firebase Authentication using their security infrastructure.</p>
+
+    <h3>2.2 Information Generated by Your Use of the App</h3>
+    <p><strong>Learning progress</strong> — quiz results, badges earned, topics viewed. Stored in your Firestore account document. Used to power the streak system and badge awards.</p>
+    <p><strong>Last open date and daily streak count</strong> — recorded each time you open the app. Stored in your Firestore account document. Used only for the learning streak feature.</p>
+    <p><strong>Language preference and theme preference</strong> — saved to your Firestore document so your settings persist across devices.</p>
+    <p><strong>Highlights and underlines on notes</strong> — saved locally on your device only using SharedPreferences. This data never leaves your device and is never uploaded to any server.</p>
+    <p><strong>FCM token</strong> — a device-specific token generated by Firebase Cloud Messaging. Stored in your Firestore document. Used only to deliver push notifications from the app to your device. It does not identify you personally.</p>
+    <p><strong>Search history (local cache)</strong> — recent search terms are saved locally on your device using SharedPreferences for faster repeat searches. Never uploaded to any server.</p>
+
+    <h3>2.3 Information Collected Automatically by Third-Party SDKs</h3>
+    <p>The app uses Google services that collect certain data automatically. We do not control this collection — it is described in Google's own privacy policies linked in Section 5.</p>
+    <p><strong>Firebase Crashlytics</strong> — if the app crashes, it sends a crash report to Google containing the crash location in code, device model, Android version, and app version. No personal information is included in crash reports.</p>
+    <p><strong>Google AdMob</strong> — serves advertisements in the app for users who are not on ad-free accounts. AdMob collects your device's Google Advertising ID (a resettable identifier), device model, Android version, and approximate location derived from your IP address. This is used to decide which ads to show you. It is handled entirely by Google's systems.</p>
+    <p><strong>Firebase App Check</strong> — verifies that requests to our backend come from the genuine EduStock app, not from automated scripts. Does not collect personal information.</p>
+
+    <h3>2.4 What We Do Not Collect</h3>
+    <p>We do not collect your precise GPS location, contacts, call logs, camera data, microphone input, health information, financial information, or any data not described above.</p>
+  </article>
+
+  <!-- 3 -->
+  <article>
     <h2>3. How We Use Your Information</h2>
+    <div class="tbl-wrap">
+    <table>
+      <tr><th>Data</th><th>How it is used</th></tr>
+      <tr><td>Name, email</td><td>Account identification, admin user management, granting ad-free access</td></tr>
+      <tr><td>Learning progress, badges</td><td>Displaying your progress, awarding badges, streak tracking</td></tr>
+      <tr><td>Language, theme preference</td><td>Restoring your settings when you log in on any device</td></tr>
+      <tr><td>FCM token</td><td>Delivering push notifications to your device</td></tr>
+      <tr><td>Crash reports (Crashlytics)</td><td>Identifying and fixing app bugs</td></tr>
+      <tr><td>Advertising ID (AdMob)</td><td>Showing relevant advertisements — handled by Google</td></tr>
+      <tr><td>Highlights and search cache</td><td>Local app features only — never leaves your device</td></tr>
+    </table>
+    </div>
+    <p>We do not use your data for marketing, selling to third parties, building advertising profiles ourselves, or any purpose not listed above.</p>
+  </article>
+
+  <!-- 4 -->
+  <article>
+    <h2>4. Administrator Access</h2>
+    <p>The app developer, acting as the administrator, can see the name, email address, account creation date, badge count, streak, language setting, and ad-free status of registered users. This access exists through the Firebase Console and the in-app admin panel.</p>
+    <p>This access is used only for: managing ad-free access grants, responding to support requests, and monitoring app stability. It is not shared with any other person or organisation.</p>
+    <p>The administrator may also collect your name and email address directly within the app in connection with specific in-app features (such as granting ad-free access or enabling beta features). You will be informed at the time of any such collection what the data is used for.</p>
+  </article>
+
+  <!-- 5 -->
+  <article>
+    <h2>5. Third-Party Services</h2>
+    <p>EduStock uses the following services provided by Google. Each operates under its own privacy policy.</p>
+
+    <div class="tbl-wrap">
+    <table>
+      <tr><th>Service</th><th>Purpose</th><th>Privacy Policy</th></tr>
+      <tr><td>Firebase Authentication</td><td>Account login and password management</td><td>policies.google.com/privacy</td></tr>
+      <tr><td>Cloud Firestore</td><td>Storing account data and learning progress</td><td>policies.google.com/privacy</td></tr>
+      <tr><td>Firebase Storage</td><td>Storing profile pictures</td><td>policies.google.com/privacy</td></tr>
+      <tr><td>Firebase Crashlytics</td><td>Crash reporting</td><td>firebase.google.com/support/privacy</td></tr>
+      <tr><td>Firebase Cloud Messaging</td><td>Push notifications</td><td>policies.google.com/privacy</td></tr>
+      <tr><td>Firebase App Check</td><td>Backend security verification</td><td>firebase.google.com/support/privacy</td></tr>
+      <tr><td>Google AdMob</td><td>Displaying advertisements</td><td>policies.google.com/technologies/ads</td></tr>
+    </table>
+    </div>
+
+    <p>We have no relationship with any other third-party data processor. We do not use analytics services, marketing platforms, or data brokers.</p>
+  </article>
+
+  <!-- 6 -->
+  <article>
+    <h2>6. Advertisements</h2>
+    <p>EduStock is free to use and is supported by advertisements delivered by Google AdMob. Ads are shown only to users whose accounts have ads enabled. The app administrator can grant individual users an ad-free experience, in which case no advertisements are shown to that user.</p>
+    <p>We do not control which specific advertisements Google shows. The content of advertisements is determined entirely by Google's systems based on factors including your Advertising ID. To opt out of personalised ads on your Android device, go to: <strong>Settings → Google → Ads → Opt out of Ads Personalisation</strong>. You can also reset your Advertising ID from the same menu.</p>
+    <p>Admin accounts never see advertisements regardless of settings.</p>
+  </article>
+
+  <!-- 7 -->
+  <article>
+    <h2>7. Children</h2>
+    <p>EduStock is intended for students aged 13 and above. We do not knowingly collect personal data from children under the age of 13. If a parent or guardian becomes aware that their child under 13 has created an account in the app, please contact us at the address in Section 11 and we will delete the account and its associated data promptly.</p>
+    <p>We have not configured AdMob to serve child-directed ads. The app is rated for users aged 13 and above.</p>
+  </article>
+
+  <!-- 8 -->
+  <article>
+    <h2>8. Data Sharing</h2>
+    <p>We do not sell your data. We do not share your data with advertisers, marketing companies, data brokers, or any organisation outside of the Google services listed in Section 5.</p>
+    <p>Your data may be disclosed if required by applicable law or a valid legal order. In that case, we would disclose only what is specifically required.</p>
+  </article>
+
+  <!-- 9 -->
+  <article>
+    <h2>9. Data Retention</h2>
+    <p><strong>Your account data</strong> (name, email, progress, preferences, badges) is retained in Firestore for as long as your account exists. When you delete your account, your Firestore document is marked as deleted and your Firebase Authentication account is removed.</p>
+    <p><strong>Crash reports</strong> collected by Firebase Crashlytics are retained for 90 days by default, after which Google deletes them automatically.</p>
+    <p><strong>Local data</strong> (highlights, search cache) is stored only on your device and is removed when you uninstall the app or clear the app's storage.</p>
+    <p><strong>AdMob data</strong> is retained according to Google's own retention policies, which we do not control.</p>
+  </article>
+
+  <!-- 10 -->
+  <article>
+    <h2>10. Deleting Your Account and Data</h2>
+    <p>You can permanently delete your account and all associated Firestore data at any time by going to <strong>Settings → Delete Account</strong> inside the app. You will be asked to confirm your password before deletion. This action cannot be undone.</p>
+    <p>For data held by Google's systems (Crashlytics, AdMob), you can manage it through Google's account controls at <strong>myaccount.google.com</strong>.</p>
+  </article>
+
+  <!-- 11 -->
+  <article>
+    <h2>11. Security</h2>
+    <p>All communication between the app and Firebase servers is encrypted using HTTPS. Passwords are never stored by us — they are managed by Firebase Authentication. Firebase Security Rules restrict access so that each user can only read and write their own data. OTP codes used for two-factor authentication are stored as cryptographic hashes, never as plain text.</p>
+    <p>No system is perfectly secure. If you become aware of a security issue in the app, please contact us immediately.</p>
+  </article>
+
+  <!-- 12 -->
+  <article>
+    <h2>12. Changes to This Policy</h2>
+    <p>If we make significant changes to this policy, we will update the effective date at the top and notify users through the app where reasonably practicable. Continued use of the app after a change is posted means you accept the updated policy.</p>
+  </article>
+
+  <!-- 13 -->
+  <article>
+    <h2>13. Contact</h2>
+    <div class="contact-block">
+      <p>For questions about this Privacy Policy or to request deletion of your data:</p>
+      <p style="margin-top:12px;"><strong>Email:</strong> support@edustock.app</p>
+      <p><strong>In-app:</strong> Settings → Help → Contact Us</p>
+    </div>
+  </article>
+
+</main>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     PAGE 2 — USER AGREEMENT
+════════════════════════════════════════════ -->
+<div id="terms" class="page">
+<main>
+
+  <h1 class="doc-title">User Agreement</h1>
+  <p class="doc-meta">
+    Effective date: May 17, 2026 &nbsp;·&nbsp; Last updated: May 2026<br>
+    By using EduStock, you agree to these terms.
+  </p>
+
+  <!-- 1 -->
+  <article>
+    <h2>1. What EduStock Is</h2>
+    <p>EduStock is an independent educational application providing study notes, topic explanations, past papers, and related content for Pakistani students in Grades 6 to 12.</p>
+    <p>EduStock is not affiliated with, endorsed by, or connected to any government body, provincial textbook board, ministry of education, or any other official institution. All content in the app is independently authored by the app developer.</p>
+  </article>
+
+  <!-- 2 -->
+  <article>
+    <h2>2. Acceptance</h2>
+    <p>By downloading or using EduStock, you agree to be bound by this User Agreement and our Privacy Policy. If you do not agree, do not use the app.</p>
+    <p>If you are under 18, a parent or guardian must review and agree to these terms on your behalf.</p>
+  </article>
+
+  <!-- 3 -->
+  <article>
+    <h2>3. Accounts</h2>
+    <p>You must provide accurate information when creating an account. You are responsible for keeping your password secure and for all activity that takes place under your account.</p>
+    <p>You may not create an account on behalf of another person without their consent. You may not share your account with others.</p>
+    <p>You may delete your account at any time from Settings inside the app. We may suspend or terminate accounts that violate this agreement.</p>
+  </article>
+
+  <!-- 4 -->
+  <article>
+    <h2>4. Content and Educational Use</h2>
+    <p>All notes, explanations, solutions, and other content in this app are written independently by the app developer for supplementary study purposes. They are not official materials and have not been verified or approved by any textbook board or educational authority.</p>
+    <p>You must refer to your official school textbooks and materials for exam preparation and final academic reference. EduStock content is a study aid, not a substitute for official education.</p>
+    <p>We do not guarantee that any content in the app is free from errors. If you find an error, you can report it through the Help section.</p>
+  </article>
+
+  <!-- 5 -->
+  <article>
+    <h2>5. Intellectual Property</h2>
+    <p>All original content in EduStock — including written explanations, solutions, notes, the user interface design, and the app's structure — belongs to the app developer.</p>
+    <p>The app's content may reference publicly available curriculum topics. However, all written explanations and solutions are original work and are not copied from any copyrighted source.</p>
+    <p>You may not copy, reproduce, distribute, or republish any content from this app without prior written permission. You may not use any content for commercial purposes.</p>
+  </article>
+
+  <!-- 6 -->
+  <article>
+    <h2>6. Advertisements</h2>
+    <p>EduStock is free to use and displays advertisements to support its operation. Ads are served by Google AdMob. We do not control which ads are shown. We are not responsible for the content, products, or services advertised.</p>
+    <p>Admin accounts never see advertisements. Individual users may be granted an ad-free experience by the administrator at the administrator's discretion.</p>
+  </article>
+
+  <!-- 7 -->
+  <article>
+    <h2>7. In-App Feature Administration</h2>
+    <p>The app administrator may collect your name and email within the app in connection with specific feature management activities, such as enabling ad-free access or beta features. Any such collection will be communicated to you at the time it occurs. This data is used solely for administering the app and is not shared with any third party.</p>
+  </article>
+
+  <!-- 8 -->
+  <article>
+    <h2>8. Acceptable Use</h2>
+    <p>You agree not to:</p>
     <ul>
-        <li>To provide and improve our educational services</li>
-        <li>To save your learning progress</li>
-        <li>To send important notifications</li>
-        <li>To fix crashes and improve stability</li>
+      <li>Use the app for any purpose that violates applicable law</li>
+      <li>Attempt to reverse engineer, decompile, or extract source code from the app</li>
+      <li>Use automated tools to scrape or copy content from the app</li>
+      <li>Attempt to gain unauthorised access to any part of the app or its backend</li>
+      <li>Interfere with the app's operation or other users' access</li>
+      <li>Create false accounts or impersonate another person</li>
     </ul>
+  </article>
 
-    <h2>4. Firebase Services</h2>
-    <p>We use Google Firebase for authentication, database, and crash reporting. Firebase may collect device identifiers and usage data. See Google's privacy policy at <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
+  <!-- 9 -->
+  <article>
+    <h2>9. Limitation of Liability</h2>
+    <p>EduStock is provided as-is. We make no guarantee that the app will be available at all times, that its content is error-free, or that use of the app will lead to any particular academic result.</p>
+    <p>We are not liable for any academic outcomes, exam results, or decisions made based on content found in this app. We are not liable for any loss of data, device issues, or any indirect or consequential damage arising from your use of the app.</p>
+    <p>To the maximum extent permitted by applicable law in Pakistan, our total liability for any claim arising from use of this app is limited to zero, as the app is provided free of charge.</p>
+  </article>
 
-    <h2>5. Google AdMob</h2>
-    <p>EduStock is free and supported by advertisements served by Google AdMob. AdMob may use your device's Google Advertising ID (GAID) to serve relevant ads.</p>
-    <ul>
-        <li>Opt out: Device Settings → Google → Ads → Opt out of Ads Personalisation</li>
-        <li>Google ad policy: <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a></li>
-        <li>Admin accounts never see advertisements</li>
-    </ul>
+  <!-- 10 -->
+  <article>
+    <h2>10. Disclaimer on Copyright</h2>
+    <p>If you believe any content in this app infringes a copyright you hold, please contact us immediately at the address below with details of the content in question. We take such concerns seriously and will investigate and respond promptly.</p>
+  </article>
 
-    <h2>6. Data Storage</h2>
-    <p>Your data is stored securely on Google Firebase servers. We do not sell your personal data to third parties.</p>
+  <!-- 11 -->
+  <article>
+    <h2>11. Changes to This Agreement</h2>
+    <p>We may update this agreement when necessary. The effective date at the top of this document will reflect the latest update. Significant changes will be communicated through the app. Continued use of the app after changes are posted means you accept the updated agreement.</p>
+  </article>
 
-    <h2>7. Data Deletion</h2>
-    <p>You can delete your account and all associated data at any time from the Settings screen inside the app.</p>
+  <!-- 12 -->
+  <article>
+    <h2>12. Governing Law</h2>
+    <p>This agreement is governed by the laws of Pakistan. Any disputes arising from it are subject to the jurisdiction of the courts of Pakistan.</p>
+  </article>
 
-    <h2>8. Children</h2>
-    <p>EduStock is designed for students aged 13 and above. We do not knowingly collect data from children under 13.</p>
+  <!-- 13 -->
+  <article>
+    <h2>13. Contact</h2>
+    <div class="contact-block">
+      <p>Questions about this agreement:</p>
+      <p style="margin-top:12px;"><strong>Email:</strong> support@edustock.app</p>
+      <p><strong>In-app:</strong> Settings → Help → Contact Us</p>
+    </div>
+  </article>
 
-    <h2>9. Contact Us</h2>
-    <p>Questions? Contact us at: <strong>support@edustock.app</strong></p>
+</main>
+</div>
+
+<footer>
+  <p>© 2026 EduStock. All rights reserved.</p>
+  <p style="margin-top:4px;">Independent educational application. Not affiliated with any government or textbook board.</p>
+</footer>
+
+<script>
+  function show(pageId, el) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+    el.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
 </body>
 </html>
