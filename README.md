@@ -1,2 +1,2 @@
-# edustock-privacy
-my application privacy and policies 
+# edustock-privacy 
+application privacy and policies 
