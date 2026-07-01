@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduStock — Privacy Policy &amp; Terms of Use</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #F8F9FB;
+      --surface:  #FFFFFF;
+      --border:   #E4E7EC;
+      --ink:      #111827;
+      --ink-2:    #374151;
+      --ink-3:    #6B7280;
+      --accent:   #1D4ED8;
+      --accent-l: #EFF6FF;
+      --serif:    'Georgia', 'Times New Roman', serif;
+      --sans:     -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--ink);
+      color: #fff;
+      padding: 52px 24px 44px;
+      text-align: center;
+    }
+    header h1 {
+      font-family: var(--serif);
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: normal;
+      letter-spacing: -0.3px;
+      margin-bottom: 10px;
+    }
+    header p {
+      color: #9CA3AF;
+      font-size: 14px;
+    }
+
+    /* ── Nav tabs ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      display: block;
+      padding: 14px 28px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink-3);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: color .15s, border-color .15s;
+    }
+    nav a:hover, nav a.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    /* ── Layout ── */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+    }
+
+    /* ── Section headers ── */
+    .doc-title {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: normal;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .doc-meta {
+      font-size: 13px;
+      color: var(--ink-3);
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Article sections ── */
+    article { margin-bottom: 40px; }
+    article h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 12px;
+      padding-left: 12px;
+      border-left: 3px solid var(--accent);
+    }
+    article h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink-2);
+      margin: 16px 0 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    article p {
+      color: var(--ink-2);
+      margin-bottom: 12px;
+      font-size: 14.5px;
+    }
+    article p:last-child { margin-bottom: 0; }
+    article ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+      color: var(--ink-2);
+      font-size: 14.5px;
+    }
+    article ul li { margin-bottom: 6px; }
+
+    /* ── Table ── */
+    .tbl-wrap { overflow-x: auto; margin-bottom: 16px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th {
+      background: #F1F5F9;
+      color: var(--ink);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 700;
+      border-bottom: 1px solid var(--border);
+    }
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--ink-2);
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) td { background: #FAFBFC; }
+
+    /* ── Divider ── */
+    hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+    /* ── Contact block ── */
+    .contact-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      font-size: 14px;
+      color: var(--ink-2);
+    }
+    .contact-block strong { color: var(--ink); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 12px;
+      color: var(--ink-3);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 500px) {
+      nav a { padding: 12px 16px; font-size: 13px; }
+      main { padding: 32px 16px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>EduStock</h1>
+  <p>Privacy Policy &amp; Terms of Use</p>
+  <p style="margin-top:6px;">Effective: July 1, 2026 &nbsp;·&nbsp; Pakistan</p>
+</header>
+
+<nav>
+  <a href="#" class="active" onclick="show('privacy', this); return false;">Privacy Policy</a>
+  <a href="#" onclick="show('terms', this); return false;">Terms of Use</a>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     PAGE 1 — PRIVACY POLICY
+════════════════════════════════════════════ -->
+<div id="privacy" class="page active">
+<main>
+
+  <h1 class="doc-title">Privacy Policy</h1>
+  <p class="doc-meta">
+    Effective date: July 1, 2026 &nbsp;·&nbsp; Last updated: July 2026<br>
+    This policy applies to the EduStock mobile application for Android.
+  </p>
+
+  <!-- 1 -->
+  <article>
+    <h2>1. Who We Are</h2>
+    <p>EduStock is an independent educational application built for students in Grades 6 to 12. We are not affiliated with, endorsed by, or connected to any government body, provincial textbook board, or ministry of education. The app is developed and operated by an individual developer based in Pakistan.</p>
+    <p>When this policy says "we", "us", or "our", it refers to the developer of EduStock. When it says "you", it refers to anyone who uses the app.</p>
+  </article>
+
+  <!-- 2 -->
+  <article>
+    <h2>2. What Information We Collect and Why</h2>
+
+    <h3>2.1 Information You Give Us Directly</h3>
+    <p><strong>Name and email address</strong> — collected when you create an account. Stored in Google Firebase. Used to identify your account and restore your progress across devices.</p>
+    <p><strong>Profile picture</strong> — uploaded optionally by you. Stored on Google Firebase Storage. Displayed only to you inside the app.</p>
+
+    <h3>2.2 Information Generated by Your Use of the App</h3>
+    <p><strong>Learning progress</strong> — quiz results, badges earned, topics viewed. Stored in your Firestore account document. Used to power the streak system and badge awards.</p>
+    <p><strong>Last open date and daily streak count</strong> — recorded each time you open the app. Stored in your Firestore account document. Used only for the learning streak feature.</p>
+    <p><strong>Language preference and theme preference</strong> — saved to your Firestore document so your settings persist across devices.</p>
+    <p><strong>Highlights and underlines on notes</strong> — saved locally on your device only. This data never leaves your device and is never uploaded to any server.</p>
+    <p><strong>Content visit history</strong> — the app keeps a local count of which classes, chapters, and topics you open most often. This is stored only on your device and is used solely to decide which advertisement to prepare in advance, so it loads faster when you need it. This data never leaves your device and is never uploaded to any server.</p>
+    <p><strong>Unlock status for locked content</strong> — when you unlock a class or chapter by watching a rewarded advertisement, the unlock time is saved locally on your device so the content stays accessible for the unlock period without watching another ad. This data never leaves your device.</p>
+    <p><strong>FCM token</strong> — a device-specific token generated by Firebase Cloud Messaging. Stored in your Firestore document and linked to your account solely to route push notifications to your device. It does not identify you outside of the app.</p>
+
+    <h3>2.3 Information Collected Automatically by Third-Party SDKs</h3>
+    <p>The app uses Google services that collect certain data automatically. We do not control this collection — it is described in Google's own privacy policies linked in Section 5.</p>
+    <p><strong>Firebase Crashlytics</strong> — if the app crashes, it sends a report to Google containing the crash location in code, device model, Android version, and app version. No personal information is included in crash reports.</p>
+    <p><strong>Google AdMob</strong> — serves advertisements to users who are not on ad-free accounts. AdMob collects your device's Google Advertising ID (a resettable identifier), device model, Android version, and approximate location derived from your IP address. This is used to decide which ads to show you and is handled entirely by Google's systems.</p>
+    <p><strong>Unity Ads</strong> — serves advertisements alongside AdMob through AdMob's mediation system. Unity Ads also collects your Google Advertising ID, device model, and Android version for ad delivery. Unity processes this data under its own privacy policy linked in Section 5. In regions where GDPR applies, we forward your consent decision to Unity Ads before any ad is loaded.</p>
+    <p><strong>Meta Audience Network</strong> — serves advertisements through AdMob's mediation system. Meta collects your Google Advertising ID, device model, Android version, and network information for ad delivery. Meta processes this data under its own privacy policy linked in Section 5.</p>
+    <p><strong>AppLovin</strong> — serves advertisements through AdMob's mediation system. AppLovin collects your Google Advertising ID, device model, and Android version for ad targeting and delivery. AppLovin processes this data under its own privacy policy linked in Section 5.</p>
+    <p><strong>ironSource (Levelplay)</strong> — serves advertisements through AdMob's mediation system on a waterfall basis. ironSource collects your Google Advertising ID, device model, and Android version for ad delivery. ironSource processes this data under its own privacy policy linked in Section 5.</p>
+    <p><strong>Firebase App Check</strong> — verifies that requests to our backend come from the genuine EduStock app. Does not collect personal information.</p>
+
+    <h3>2.4 What We Do Not Collect</h3>
+    <p>We do not collect your precise GPS location, contacts, call logs, microphone input, health information, financial information, or any data not described above. The camera and photo library are accessed only when you choose to upload a profile picture — no images are stored on our servers beyond the profile picture you explicitly select.</p>
+  </article>
+
+  <!-- 3 -->
+  <article>
+    <h2>3. How We Use Your Information</h2>
+    <div class="tbl-wrap">
+    <table>
+      <tr><th>Data</th><th>How it is used</th></tr>
+      <tr><td>Name, email</td><td>Account identification, admin user management, granting ad-free access</td></tr>
+      <tr><td>Learning progress, badges</td><td>Displaying your progress, awarding badges, streak tracking</td></tr>
+      <tr><td>Language, theme preference</td><td>Restoring your settings when you log in on any device</td></tr>
+      <tr><td>FCM token</td><td>Delivering push notifications to your device</td></tr>
+      <tr><td>Crash reports (Crashlytics)</td><td>Identifying and fixing app bugs</td></tr>
+      <tr><td>Advertising ID (AdMob)</td><td>Showing advertisements — handled entirely by Google</td></tr>
+      <tr><td>Advertising ID (Unity Ads)</td><td>Showing advertisements via AdMob mediation — handled by Unity</td></tr>
+      <tr><td>Highlights</td><td>Local app feature only — never leaves your device</td></tr>
+      <tr><td>Content visit history</td><td>Local app feature only — speeds up advertisement loading, never leaves your device</td></tr>
+      <tr><td>Unlock status (classes/chapters)</td><td>Local app feature only — remembers what you've unlocked, never leaves your device</td></tr>
+    </table>
+    </div>
+    <p>We do not use your data for marketing, selling to third parties, building advertising profiles, or any purpose not listed above.</p>
+  </article>
+
+  <!-- 4 -->
+  <article>
+    <h2>4. Administrator Access</h2>
+    <p>The app developer, acting as the administrator, can see the name, email address, account creation date, badge count, streak, language setting, and ad-free status of registered users. This access is used only for managing ad-free access grants, responding to support requests, and monitoring app stability. It is not shared with any other person or organisation.</p>
+  </article>
+
+  <!-- 5 -->
+  <article>
+    <h2>5. Third-Party Services</h2>
+    <p>EduStock uses the following services provided by Google. Each operates under its own privacy policy.</p>
+    <div class="tbl-wrap">
+    <table>
+      <tr><th>Service</th><th>Purpose</th><th>Privacy Policy</th></tr>
+      <tr><td>Firebase Authentication</td><td>Account login and password management</td><td>policies.google.com/privacy</td></tr>
+      <tr><td>Cloud Firestore</td><td>Storing account data and learning progress</td><td>policies.google.com/privacy</td></tr>
+      <tr><td>Firebase Storage</td><td>Storing profile pictures</td><td>policies.google.com/privacy</td></tr>
+      <tr><td>Firebase Crashlytics</td><td>Crash reporting</td><td>firebase.google.com/support/privacy</td></tr>
+      <tr><td>Firebase Cloud Messaging</td><td>Push notifications</td><td>policies.google.com/privacy</td></tr>
+      <tr><td>Firebase App Check</td><td>Backend security verification</td><td>firebase.google.com/support/privacy</td></tr>
+      <tr><td>Google AdMob</td><td>Displaying advertisements</td><td>policies.google.com/technologies/ads</td></tr>
+      <tr><td>Unity Ads</td><td>Displaying advertisements via AdMob mediation</td><td>unity.com/legal/privacy-policy</td></tr>
+      <tr><td>Meta Audience Network</td><td>Displaying advertisements via AdMob mediation</td><td>facebook.com/privacy/policy</td></tr>
+      <tr><td>AppLovin</td><td>Displaying advertisements via AdMob mediation</td><td>applovin.com/privacy</td></tr>
+      <tr><td>ironSource (Levelplay)</td><td>Displaying advertisements via AdMob mediation</td><td>is.com/privacy-policy</td></tr>
+    </table>
+    </div>
+  </article>
+
+  <!-- 6 -->
+  <article>
+    <h2>6. Advertisements</h2>
+    <p>EduStock is free to use and is supported by advertisements delivered by Google AdMob and Unity Ads. Ads are shown only to users whose accounts have ads enabled. The app administrator can grant individual users an ad-free experience, in which case no advertisements are shown to that user.</p>
+    <p>Advertisements are restricted to a maximum content rating of <strong>Teen (T)</strong>, appropriate for our Grade 6–12 audience. We do not control which specific ads are shown — ad content is determined entirely by each ad network's systems, though we actively monitor and block advertisers whose ads do not meet this standard. You can manage ad personalisation and reset your Advertising ID through your device's Google account settings.</p>
+    <p>You can disable push notifications at any time through your device's app notification settings.</p>
+  </article>
+
+  <!-- 7 -->
+  <article>
+    <h2>7. App Permissions</h2>
+    <p>EduStock requests the following device permissions. All permissions are optional where noted and are only requested when you attempt to use the relevant feature.</p>
+    <ul>
+      <li><strong>Notifications</strong> — requested at first launch to allow the app to send you study reminders and announcements via Firebase Cloud Messaging. You can disable this at any time in your device's notification settings.</li>
+      <li><strong>Camera</strong> — requested only when you choose to take a photo for your profile picture. The app does not access the camera at any other time.</li>
+      <li><strong>Photos / Storage</strong> — requested only when you choose to select a photo from your gallery for your profile picture, or when you download a PDF file. No photos or files are accessed without your explicit action.</li>
+    </ul>
+    <p>If you deny a permission, the related feature will not work, but the rest of the app will continue to function normally.</p>
+  </article>
+
+  <!-- 8 -->
+  <article>
+    <h2>8. Children and Family Use</h2>
+    <p>EduStock is designed for students in Grades 6 to 12 and is rated Everyone on Google Play. The app is configured as a mixed-audience application in accordance with Google's Families policy.</p>
+    <p>We do not knowingly collect personal information from children under the age of 13. If you are a parent or guardian and believe your child under 13 has created an account, please contact us and we will delete the account and all associated data promptly.</p>
+    <p>Advertisements shown in the app are restricted to a maximum content rating of <strong>Teen (T)</strong>, suitable for our Grade 6–12 audience. Google AdMob applies appropriate child privacy protections based on each user's context.</p>
+  </article>
+
+  <!-- 9 -->
+  <article>
+    <h2>9. Data Sharing</h2>
+    <p>We do not sell your data. We do not share your data with advertisers, marketing companies, data brokers, or any organisation outside of the Google and Unity services listed in Section 5.</p>
+    <p>Your data may be disclosed if required by applicable law or a valid legal order, and only to the extent specifically required.</p>
+  </article>
+
+  <!-- 10 -->
+  <article>
+    <h2>10. Data Retention</h2>
+    <p><strong>Your account data</strong> (name, email, progress, preferences, badges) is retained for as long as your account exists. When you delete your account, your data and Firebase Authentication account are permanently removed.</p>
+    <p><strong>Crash reports</strong> collected by Firebase Crashlytics are retained for 90 days, after which Google deletes them automatically.</p>
+    <p><strong>Local data</strong> (highlights, content visit history, and unlock status for classes and chapters) is stored only on your device and is removed when you uninstall the app or clear the app's storage.</p>
+    <p><strong>AdMob and Unity Ads data</strong> is retained according to each network's own retention policies, which we do not control.</p>
+  </article>
+
+  <!-- 11 -->
+  <article>
+    <h2>11. Deleting Your Account and Data</h2>
+    <p>You can permanently delete your account and all associated data at any time by going to <strong>Settings → Delete Account</strong> inside the app. You will be asked to confirm before deletion proceeds. This action cannot be undone.</p>
+    <p>You may also request a copy of your personal data by contacting us at the address in Section 14.</p>
+    <p>For data held by Google's systems (Crashlytics, AdMob), you can manage it through Google's account controls at <strong>myaccount.google.com</strong>.</p>
+  </article>
+
+  <!-- 12 -->
+  <article>
+    <h2>12. Security</h2>
+    <p>All communication between the app and our servers is encrypted in transit. We apply appropriate technical and organisational measures to protect your data against unauthorised access, loss, or misuse. If you become aware of a security concern in the app, please contact us immediately.</p>
+  </article>
+
+  <!-- 13 -->
+  <article>
+    <h2>13. Changes to This Policy</h2>
+    <p>If we make significant changes to this policy, we will update the effective date at the top and notify users through the app at least 7 days before the change takes effect. Continued use of the app after a change is posted means you accept the updated policy.</p>
+  </article>
+
+  <!-- 14 -->
+  <article>
+    <h2>14. Contact</h2>
+    <div class="contact-block">
+      <p>For questions about this Privacy Policy or to request deletion of your data:</p>
+      <p style="margin-top:12px;"><strong>Email:</strong> skraldevelopments@gmail.com</p>
+      <p><strong>In-app:</strong> Settings → Help → Contact Us</p>
+    </div>
+  </article>
+
+</main>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     PAGE 2 — TERMS OF SERVICE
+════════════════════════════════════════════ -->
+<div id="terms" class="page">
+<main>
+
+  <h1 class="doc-title">Terms of Use</h1>
+  <p class="doc-meta">
+    Effective date: July 1, 2026 &nbsp;·&nbsp; Last updated: July 2026<br>
+    By using EduStock, you agree to these terms.
+  </p>
+
+  <!-- 1 -->
+  <article>
+    <h2>1. What EduStock Is</h2>
+    <p>EduStock is an independent educational application providing study notes, topic explanations, past papers, and related content for Pakistani students in Grades 6 to 12.</p>
+    <p>EduStock is not affiliated with, endorsed by, or connected to any government body, provincial textbook board, ministry of education, or any other official institution. All content in the app is independently authored by the app developer.</p>
+  </article>
+
+  <!-- 2 -->
+  <article>
+    <h2>2. Acceptance</h2>
+    <p>By downloading or using EduStock, you agree to be bound by these Terms of Use and our Privacy Policy. If you do not agree, do not use the app.</p>
+    <p>If you are under 13, you must not create an account. If you are between 13 and 17, a parent or guardian should review these terms. By allowing a minor to use the app, the parent or guardian agrees to these terms on their behalf.</p>
+  </article>
+
+  <!-- 3 -->
+  <article>
+    <h2>3. Accounts</h2>
+    <p>You must provide accurate information when creating an account. You are responsible for keeping your credentials secure and for all activity that takes place under your account.</p>
+    <p>You may not create an account on behalf of another person without their consent, and you may not share your account with others.</p>
+    <p>You may delete your account at any time from Settings inside the app. We may suspend or terminate accounts that violate these terms.</p>
+  </article>
+
+  <!-- 4 -->
+  <article>
+    <h2>4. Content and Educational Use</h2>
+    <p>All notes, explanations, solutions, and other content in this app are written independently by the app developer for supplementary study purposes. They are not official materials and have not been verified or approved by any textbook board or educational authority.</p>
+    <p>You must refer to your official school textbooks and materials for exam preparation and final academic reference. EduStock content is a study aid, not a substitute for official education.</p>
+    <p>We do not guarantee that content in the app is free from errors. If you find an error, you can report it through the Help section.</p>
+    <p><strong>Note on curriculum content:</strong> Content for Classes 10–12 includes human biology and reproductive science as part of the standard Pakistani curriculum. This content is strictly educational and reflects the official textbook syllabus.</p>
+  </article>
+
+  <!-- 5 -->
+  <article>
+    <h2>5. Intellectual Property</h2>
+    <p>All original content in EduStock — including written explanations, solutions, notes, the user interface design, and the app's structure — belongs to the app developer.</p>
+    <p>The app's content may reference publicly available curriculum topics. All written explanations and solutions are original work and are not copied from any copyrighted source.</p>
+    <p>You may not copy, reproduce, distribute, or republish any content from this app without prior written permission, and you may not use any content for commercial purposes.</p>
+  </article>
+
+  <!-- 6 -->
+  <article>
+    <h2>6. Advertisements</h2>
+    <p>EduStock is free to use and displays advertisements to support its operation. Ads are served by Google AdMob and its mediation partners (Unity Ads, Meta Audience Network, AppLovin, and ironSource) and are restricted to a maximum content rating of Teen (T), appropriate for our Grade 6–12 audience. We do not control which specific ads are shown and are not responsible for the content, products, or services advertised.</p>
+    <p>Individual users may be granted an ad-free experience by the administrator. Admin accounts do not see advertisements.</p>
+  </article>
+
+  <!-- 7 -->
+  <article>
+    <h2>7. Acceptable Use</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Use the app for any purpose that violates applicable law</li>
+      <li>Attempt to reverse engineer, decompile, or extract source code from the app</li>
+      <li>Use automated tools to scrape or copy content from the app</li>
+      <li>Attempt to gain unauthorised access to any part of the app or its backend</li>
+      <li>Interfere with the app's operation or other users' access</li>
+      <li>Create false accounts or impersonate another person</li>
+    </ul>
+  </article>
+
+  <!-- 8 -->
+  <article>
+    <h2>8. Limitation of Liability</h2>
+    <p>EduStock is provided as-is. We make no guarantee that the app will be available at all times, that its content is error-free, or that use of the app will lead to any particular academic result.</p>
+    <p>We are not liable for academic outcomes, exam results, or decisions made based on content found in this app, nor for any loss of data, device issues, or indirect or consequential damage arising from your use of the app.</p>
+    <p>To the maximum extent permitted by applicable law in Pakistan, our total liability for any claim arising from use of this app shall not exceed the total amount you have paid to use EduStock. As EduStock is provided entirely free of charge, our total liability under these terms is nil.</p>
+  </article>
+
+  <!-- 9 -->
+  <article>
+    <h2>9. Copyright Concerns</h2>
+    <p>If you believe any content in this app infringes a copyright you hold, please contact us at the address below with details of the content in question. We take such concerns seriously and will investigate and respond promptly.</p>
+  </article>
+
+  <!-- 10 -->
+  <article>
+    <h2>10. Changes to These Terms</h2>
+    <p>We may update these terms when necessary. The effective date at the top of this document will reflect the latest update. Significant changes will be communicated through the app at least 7 days before they take effect. Continued use of the app after changes are posted means you accept the updated terms.</p>
+  </article>
+
+  <!-- 11 -->
+  <article>
+    <h2>11. Governing Law</h2>
+    <p>These terms are governed by the laws of Pakistan. Any disputes arising from them are subject to the jurisdiction of the courts of Pakistan.</p>
+  </article>
+
+  <!-- 12 -->
+  <article>
+    <h2>12. Contact</h2>
+    <div class="contact-block">
+      <p>For questions about these Terms of Use:</p>
+      <p style="margin-top:12px;"><strong>Email:</strong> skraldevelopments@gmail.com</p>
+      <p><strong>In-app:</strong> Settings → Help → Contact Us</p>
+    </div>
+  </article>
+
+</main>
+</div>
+
+<footer>
+  <p>© 2026 EduStock. All rights reserved.</p>
+  <p style="margin-top:4px;">Independent educational application. Not affiliated with any government or textbook board.</p>
+</footer>
+
+<script>
+  function show(pageId, el) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+    el.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
